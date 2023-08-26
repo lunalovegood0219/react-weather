@@ -1,0 +1,81 @@
+import React from "react";
+import ReactAnimatedWeather from "react-animated-weather";
+import "./Forcast.css";
+export default function Forcast (){
+    const defaults = {
+      icon: "CLEAR_DAY",
+      color: "black",
+      size: 51,
+      animate: true,
+    };
+    const partlyCloudyDay = {
+      icon: "PARTLY_CLOUDY_DAY",
+      color: "balck",
+      size: 51,
+      animate: true,
+    };
+    const cloudy = {
+      icon: "CLOUDY",
+      color: "balck",
+      size: 51,
+      animate: true,
+    };
+    const rain = {
+      icon: "RAIN",
+      color: "balck",
+      size: 51,
+      animate: true,
+    };
+    const sleet = {
+      icon: "SLEET",
+      color: "balck",
+      size: 51,
+      animate: true,
+    };
+    return (
+      <div className="row Forcast">
+        <div className="col-2">
+          <ReactAnimatedWeather
+            icon={defaults.icon}
+            color={defaults.color}
+            size={defaults.size}
+            animate={defaults.animate}
+          />
+        </div>
+        <div className="col-2">
+          <ReactAnimatedWeather
+            icon={partlyCloudyDay.icon}
+            color={partlyCloudyDay.color}
+            size={partlyCloudyDay.size}
+            animate={partlyCloudyDay.animate}
+          />
+        </div>
+        <div className="col-2">
+          <ReactAnimatedWeather
+            icon={cloudy.icon}
+            color={cloudy.color}
+            size={cloudy.size}
+            animate={cloudy.animate}
+          />
+        </div>
+        <div className="col-2">
+          <ReactAnimatedWeather
+            icon={rain.icon}
+            color={rain.color}
+            size={rain.size}
+            animate={rain.animate}
+          />
+        </div>
+        <div className="col-2">
+          <div className="col-2">
+            <ReactAnimatedWeather
+              icon={sleet.icon}
+              color={sleet.color}
+              size={sleet.size}
+              animate={sleet.animate}
+            />
+        </div>
+      </div>
+      </div>
+    );
+}

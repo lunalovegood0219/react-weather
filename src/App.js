@@ -1,4 +1,5 @@
 import "./App.css";
+import Forcast from "./Forcast";
 import SearchEngine from "./SearchEngine";
 import Weather from "./Weather";
 
@@ -7,6 +8,7 @@ function App() {
     <div className="App weather-container container">
       <SearchEngine />
       <Weather />
+      <Forcast />
     </div>
   );
 }
