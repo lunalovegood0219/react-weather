@@ -1,3 +1,9 @@
 .Forcast{
    margin-left: 20px;
+   text-transform: capitalize;
+}
+@media (max-width:570px){
+    .Forcast{
+        display: flex;
+    }
 }

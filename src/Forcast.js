@@ -35,6 +35,9 @@ export default function Forcast (){
     return (
       <div className="row Forcast">
         <div className="col-2">
+          <center>
+            sun <br /> 18°
+          </center>
           <ReactAnimatedWeather
             icon={defaults.icon}
             color={defaults.color}
@@ -43,6 +46,9 @@ export default function Forcast (){
           />
         </div>
         <div className="col-2">
+          <center>
+            mon <br /> 18°
+          </center>
           <ReactAnimatedWeather
             icon={partlyCloudyDay.icon}
             color={partlyCloudyDay.color}
@@ -51,6 +57,9 @@ export default function Forcast (){
           />
         </div>
         <div className="col-2">
+          <center>
+            tue <br /> 18°
+          </center>
           <ReactAnimatedWeather
             icon={cloudy.icon}
             color={cloudy.color}
@@ -59,6 +68,9 @@ export default function Forcast (){
           />
         </div>
         <div className="col-2">
+          <center>
+            wed <br /> 18°
+          </center>
           <ReactAnimatedWeather
             icon={rain.icon}
             color={rain.color}
@@ -66,16 +78,18 @@ export default function Forcast (){
             animate={rain.animate}
           />
         </div>
+
         <div className="col-2">
-          <div className="col-2">
-            <ReactAnimatedWeather
-              icon={sleet.icon}
-              color={sleet.color}
-              size={sleet.size}
-              animate={sleet.animate}
-            />
+          <center>
+            thu <br /> 18°
+          </center>
+          <ReactAnimatedWeather
+            icon={sleet.icon}
+            color={sleet.color}
+            size={sleet.size}
+            animate={sleet.animate}
+          />
         </div>
-      </div>
       </div>
     );
 }
