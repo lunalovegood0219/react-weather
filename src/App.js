@@ -3,10 +3,8 @@ import SearchEngine from "./SearchEngine";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container">
       <SearchEngine />
-      <h1>hi</h1>
-      <h2>bye</h2>
     </div>
   );
  
