@@ -5,10 +5,14 @@ import Weather from "./Weather";
 
 function App() {
   return (
-    <div className="App weather-container container">
+    <div className="App  container">
+      <div className="weather-container">
       <SearchEngine />
       <Weather />
       <Forcast />
+    </div>
+    <a href="https://github.com/lunalovegood0219/react-weather" > open-source code by Fatemeh barxegar</a>
+    
     </div>
   );
 }
