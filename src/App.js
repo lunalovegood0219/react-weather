@@ -12,7 +12,7 @@ function App() {
       <Forcast />
     </div>
     <a href="https://github.com/lunalovegood0219/react-weather"> open-source code</a> 
-    <span> by Fatemeh barxegar</span>
+    <span> by Fatemeh barzegar</span>
     
     </div>
   );
