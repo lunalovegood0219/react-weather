@@ -6,3 +6,6 @@ li{
     font-size: 53px;
     margin-left: 5px;
 }
+.Weather ul{
+    opacity: 0.7;
+} 

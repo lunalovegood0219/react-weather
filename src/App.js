@@ -9,6 +9,7 @@ function App() {
       <div className="weather-container">
         <SearchEngine />
         <Weather />
+        <hr />
         <Forcast />
       </div>
       <div className="info">

@@ -35,7 +35,7 @@ export default function Forcast() {
   };
   return (
     <div className="container">
-      <div className="row Forcast">
+      <div className="row Forcast-icon">
         <div className="col-2">
           <center>
             sun <br /> 18°

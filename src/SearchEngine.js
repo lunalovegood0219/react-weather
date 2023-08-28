@@ -11,14 +11,14 @@ export default function SearchEngine() {
               placeholder="Type a city..."
               className="form-control"
               autocomplete="off"
-              spellCheck="true"
+              spellCheck="true" 
             />
           </div>
-          <div class="col-md-3">
+          <div class="col-3 ">
             <input
               type="submit"
               value="Search"
-              className="btn btn-dark w-100 "
+              className="btn btn-dark w-100 submit-btn"
             />
           </div>
         </div>

@@ -1,0 +1,7 @@
+@media(max-width: 570px){
+    .submit-btn{
+       text-align: center;
+       padding-right: 70px;
+       padding-left: 20px;       
+    }
+}

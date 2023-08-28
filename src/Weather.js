@@ -10,9 +10,9 @@ export default function Weather() {
     };
   return (
     <div className="Weather">
-      <h2>lisbon</h2>
+      <h2 className="text-center">lisbon</h2>
       <div className="time">
-        <ul>
+        <ul className="text-center">
           <li>saturday 15:48</li>
           <li>clear</li>
         </ul>
@@ -24,10 +24,10 @@ export default function Weather() {
           size={defaults.size}
           animate={defaults.animate}
         />
-       <span className="main-temp">25°C</span> 
+        <span className="main-temp">25°C</span>
       </div>
       <div className="describtion">
-        <ul>
+        <ul className="text-center">
           <li>Precipitation : 44%</li>
           <li> wind : 11 km/h</li>
         </ul>
