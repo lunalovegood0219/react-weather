@@ -17,7 +17,7 @@ export default function Weather() {
           <li>clear</li>
         </ul>
       </div>
-      <div>
+      <div className="text-center">
         <ReactAnimatedWeather
           icon={defaults.icon}
           color={defaults.color}

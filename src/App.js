@@ -2,18 +2,15 @@ import "./App.css";
 import Forcast from "./Forcast";
 import SearchEngine from "./SearchEngine";
 import Weather from "./Weather";
-
+import "bootstrap/dist/css/bootstrap.css"
 function App() {
   return (
-    <div className="App  container">
+    <div className="App">
       <div className="weather-container">
-      <SearchEngine />
-      <Weather />
-      <Forcast />
-    </div>
-    <a href="https://github.com/lunalovegood0219/react-weather"> open-source code</a> 
-    <span> by Fatemeh barzegar</span>
-    
+        <SearchEngine />
+        <Weather />
+        <Forcast />
+      </div>
     </div>
   );
 }

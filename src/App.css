@@ -1,7 +1,9 @@
 .weather-container{
+    border: 1px solid rgb(194, 191, 191);
     border-radius: 4px;
     box-shadow: 0 10px 10px 0 rgb(0 0 0 / 16%), 0 0 0 1px rgb(0 0 0 / 8%);
-    margin: 20px 0 auto;
+    margin: 20px 0px auto;
     max-width: 630px;
     padding: 20px 16px 24px;
 }
+
