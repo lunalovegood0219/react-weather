@@ -54,7 +54,7 @@ export default function SearchEngine() {
     return (
       <div>
         {form}
-        <Weather api={api} />
+        <Weather api={api} city={city}/>
       </div>
     );
   } else {
