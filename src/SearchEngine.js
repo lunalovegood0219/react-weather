@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useState } from "react";
 import Weather from "./Weather";
 import "./SearchEngine.css";
+import { Hourglass } from "react-loader-spinner";
+
 
 export default function SearchEngine() {
   const [api, setApi] = useState({ loaded : false});
@@ -66,7 +68,17 @@ export default function SearchEngine() {
     return (
       <div>
         {form}
-        <h3>looking for the information</h3>
+        <span className="loading-spinner">
+          <Hourglass
+            visible={true}
+            height="80"
+            width="60"
+            ariaLabel="hourglass-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            colors={["#306cce", "#72a1ed"]}
+          />
+        </span>
       </div>
     );
   }
