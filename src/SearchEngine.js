@@ -1,14 +1,17 @@
 import axios from "axios";
 import React, { useState } from "react";
+import Weather from "./Weather";
 import "./SearchEngine.css";
 
 export default function SearchEngine() {
-  const [weather, setWeather] = useState("");
+  const [api, setApi] = useState("");
   const [city, setCity] = useState("");
+  const [loaded, setLoaded] = useState(false);
 
   function displayWeather(response) {
     console.log(response.data);
-    setWeather(response.data.main.temp);
+    setApi(response.data.main.temp);
+    setLoaded(true);
   }
 
   function handleSearch(event) {
@@ -21,32 +24,45 @@ export default function SearchEngine() {
   function updateCity(event) {
     setCity(event.target.value);
   }
-
-  return (
-    <div>
-      <form className="mb-3 mt-3">
-        <div className="row">
-          <div className="col-md-9">
-            <input
-              type="search"
-              placeholder="Type a city..."
-              className="form-control"
-              autoComplete="off"
-              onChange={updateCity}
-            />
-          </div>
-          <div className="col-3">
-            <button
-              type="submit"
-              className="btn btn-dark w-100 submit-btn"
-              onClick={handleSearch}
-            >
-              Search
-            </button>
-          </div>
+  let form = (
+    <form className="mb-3 mt-3">
+      <div className="row">
+        <div className="col-md-9">
+          <input
+            type="search"
+            placeholder="Type a city..."
+            className="form-control"
+            autoComplete="off"
+            spellCheck={true}
+            onChange={updateCity}
+          />
         </div>
-      </form>
-      <h1>{weather}</h1>
-    </div>
+        <div className="col-3">
+          <button
+            type="submit"
+            className="btn btn-dark w-100 submit-btn"
+            onClick={handleSearch}
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </form>
   );
+
+  if (loaded) {
+    return (
+      <div>
+        {form}
+        <Weather api={api} />
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        {form}
+        <h3>looking for the information</h3>
+      </div>
+    );
+  }
 }

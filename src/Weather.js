@@ -1,7 +1,7 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 import "./Weather.css"
-export default function Weather() {
+export default function Weather(props) {
     const defaults = {
       icon: "CLEAR_DAY",
       color: "goldenrod",
@@ -24,7 +24,7 @@ export default function Weather() {
           size={defaults.size}
           animate={defaults.animate}
         />
-        <span className="main-temp">25°C</span>
+        <span className="main-temp">{Math.round(props.api)}°C</span>
       </div>
       <div className="describtion">
         <ul className="text-center">

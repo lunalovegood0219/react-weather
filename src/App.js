@@ -1,7 +1,6 @@
 import "./App.css";
 import Forcast from "./Forcast";
 import SearchEngine from "./SearchEngine";
-import Weather from "./Weather";
 import "bootstrap/dist/css/bootstrap.css"
 import Unit from "./Unit"
 
@@ -10,7 +9,6 @@ function App() {
     <div className="App">
       <div className="weather-container">
         <SearchEngine />
-        <Weather />
         <Unit />
         <hr />
         <Forcast />
