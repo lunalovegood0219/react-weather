@@ -4,19 +4,19 @@ import Weather from "./Weather";
 import "./SearchEngine.css";
 
 export default function SearchEngine() {
-  const [api, setApi] = useState("");
+  const [api, setApi] = useState({ loaded : false});
   const [city, setCity] = useState("");
-  const [loaded, setLoaded] = useState(false);
 
   function displayWeather(response) {
     console.log(response.data);
     setApi({
+      loaded: true,
       temprature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind : response.data.wind.speed
     });
-    setLoaded(true);
+    
   }
 
   function handleSearch(event) {
@@ -55,7 +55,7 @@ export default function SearchEngine() {
     </form>
   );
 
-  if (loaded) {
+  if (api.loaded) {
     return (
       <div>
         {form}
