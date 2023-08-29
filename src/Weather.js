@@ -10,12 +10,12 @@ export default function Weather(props) {
     };
   return (
     <div className="Weather">
-      <h2 className="text-center">{props.city}</h2>
+      <h2 className="text-center text-capitalize">{props.city}</h2>
       <div className="time">
         <ul className="text-center">
           <li>saturday 15:48</li>
           <li>
-            descripe: <br /> {props.api.description}
+            descripe: <br /><span className="text-capitalize">{props.api.description}</span> 
           </li>
         </ul>
       </div>
