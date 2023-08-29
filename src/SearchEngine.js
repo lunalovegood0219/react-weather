@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import Weather from "./Weather";
 import "./SearchEngine.css";
-import { Hourglass } from "react-loader-spinner";
+import { RotatingLines } from "react-loader-spinner";
 
 
 export default function SearchEngine() {
@@ -69,14 +69,12 @@ export default function SearchEngine() {
       <div>
         {form}
         <span className="loading-spinner">
-          <Hourglass
+          <RotatingLines
+            strokeColor="grey"
+            strokeWidth="5"
+            animationDuration="0.75"
+            width="96"
             visible={true}
-            height="80"
-            width="60"
-            ariaLabel="hourglass-loading"
-            wrapperStyle={{}}
-            wrapperClass=""
-            colors={["#306cce", "#72a1ed"]}
           />
         </span>
       </div>
