@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SearchEngine.css";
 import axios from "axios";
 export default function SearchEngine(props) {
+  const [temprature, setTemprature] = useState(" ");
+  const [city, setCity] = useState(" ");
   function displayWeather(response) {
     console.log(response.data);
+    setTemprature(response.data.main.temp);
   }
-  function handleSearch() {
-    const apiKey = "51f128ddb960a0cbed5d6f3eea37ad01";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
+  function handleSearch(event) {
+    event.preventDefault();
+    const apiKey = "bc5ca568ee2d7c71357ca430a3ff8705";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayWeather);
+  }
+  function updateCity(event) {
+    setCity(event.target.value);
   }
   return (
     <div className="row">
@@ -20,7 +27,7 @@ export default function SearchEngine(props) {
               placeholder="Type a city..."
               className="form-control"
               autoComplete="off"
-              spellCheck="true"
+              onChange={updateCity}
             />
           </div>
           <div className="col-3 ">
@@ -32,6 +39,7 @@ export default function SearchEngine(props) {
           </div>
         </div>
       </form>
+      <h1>{temprature}</h1>
     </div>
   );
 }
