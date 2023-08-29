@@ -14,7 +14,9 @@ export default function Weather(props) {
       <div className="time">
         <ul className="text-center">
           <li>saturday 15:48</li>
-          <li>clear</li>
+          <li>
+            descripe: <br /> {props.api.description}
+          </li>
         </ul>
       </div>
       <div className="text-center">
@@ -24,12 +26,12 @@ export default function Weather(props) {
           size={defaults.size}
           animate={defaults.animate}
         />
-        <span className="main-temp">{Math.round(props.api)}°C</span>
+        <span className="main-temp">{Math.round(props.api.temprature)}°C</span>
       </div>
       <div className="describtion">
         <ul className="text-center">
-          <li>Precipitation : 44%</li>
-          <li> wind : 11 km/h</li>
+          <li>humidity : {Math.round(props.api.humidity)} %</li>
+          <li> wind : {Math.round(props.api.wind)} km/h</li>
         </ul>
       </div>
     </div>

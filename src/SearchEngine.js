@@ -10,7 +10,12 @@ export default function SearchEngine() {
 
   function displayWeather(response) {
     console.log(response.data);
-    setApi(response.data.main.temp);
+    setApi({
+      temprature: response.data.main.temp,
+      description: response.data.weather[0].description,
+      humidity: response.data.main.humidity,
+      wind : response.data.wind.speed
+    });
     setLoaded(true);
   }
 
