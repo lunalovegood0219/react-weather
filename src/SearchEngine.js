@@ -4,10 +4,9 @@ import Weather from "./Weather";
 import "./SearchEngine.css";
 import { RotatingLines } from "react-loader-spinner";
 
-
-export default function SearchEngine() {
-  const [api, setApi] = useState({ loaded : false});
-  const [city, setCity] = useState("");
+export default function SearchEngine(props) {
+  const [api, setApi] = useState({ loaded: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function displayWeather(response) {
     console.log(response.data);
@@ -16,16 +15,18 @@ export default function SearchEngine() {
       temprature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
-      wind : response.data.wind.speed
+      wind: response.data.wind.speed,
     });
-    
+  }
+  function search() {
+    const apiKey = "51f128ddb960a0cbed5d6f3eea37ad01";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayWeather);
   }
 
   function handleSearch(event) {
     event.preventDefault();
-    const apiKey = "51f128ddb960a0cbed5d6f3eea37ad01";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(displayWeather);
+    search();
   }
 
   function updateCity(event) {
@@ -61,10 +62,11 @@ export default function SearchEngine() {
     return (
       <div>
         {form}
-        <Weather api={api} city={city}/>
+        <Weather api={api} city={city} />
       </div>
     );
   } else {
+    search();
     return (
       <div>
         {form}
