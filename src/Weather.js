@@ -1,6 +1,7 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 import "./Weather.css"
+import FormatedDate from "./FormatedDate";
 export default function Weather(props) {
     const defaults = {
       icon: "CLEAR_DAY",
@@ -13,9 +14,9 @@ export default function Weather(props) {
       <h2 className="text-center text-capitalize">{props.city}</h2>
       <div className="time">
         <ul className="text-center">
-          <li>saturday 15:48</li>
+          <li><FormatedDate /> </li>
           <li>
-            descripe: <br /><span className="text-capitalize">{props.api.description}</span> 
+            <span className="text-capitalize">{props.api.description}</span> 
           </li>
         </ul>
       </div>
