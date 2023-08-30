@@ -2,14 +2,12 @@ import "./App.css";
 import Forcast from "./Forcast";
 import SearchEngine from "./SearchEngine";
 import "bootstrap/dist/css/bootstrap.css"
-import Unit from "./Unit"
 
 function App() {
   return (
     <div className="App">
       <div className="weather-container">
         <SearchEngine defaultCity ="tehran" />
-        <Unit />
         <hr />
         <Forcast />
       </div>

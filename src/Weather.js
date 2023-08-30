@@ -1,8 +1,8 @@
 import React from "react";
-import ReactAnimatedWeather from "react-animated-weather";
 import "./Weather.css"
 import FormatedDate from "./FormatedDate";
 import WeatherIcon from "./WeatherIcon";
+import Unit from "./Unit"
 export default function Weather(props) {
     
   return (
@@ -26,6 +26,9 @@ export default function Weather(props) {
           <li> wind : {Math.round(props.api.wind)} km/h</li>
         </ul>
       </div>
+      <div>
+        <Unit />
+        </div>
     </div>
   );
 }
