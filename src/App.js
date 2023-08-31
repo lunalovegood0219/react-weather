@@ -1,13 +1,19 @@
 import "./App.css";
+import Clock from "./Clock";
 import Forcast from "./Forcast";
 import SearchEngine from "./SearchEngine";
+import FormatedDate from "./FormatedDate";
 import "bootstrap/dist/css/bootstrap.css"
 
 function App() {
   return (
     <div className="App">
       <div className="weather-container">
-        <SearchEngine defaultCity ="tehran" />
+        <span>
+          <FormatedDate className="d-flex" /> <Clock className="d-flex" />
+        </span>
+
+        <SearchEngine defaultCity="tehran" />
         <hr />
         <Forcast />
       </div>

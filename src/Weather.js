@@ -1,6 +1,5 @@
 import React from "react";
 import "./Weather.css"
-import FormatedDate from "./FormatedDate";
 import WeatherIcon from "./WeatherIcon";
 import ReactAnimatedWeather from "react-animated-weather";
 import Unit from "./Unit"
@@ -11,7 +10,6 @@ export default function Weather(props) {
       <h2 className="text-center text-capitalize">{props.city}</h2>
       <div className="time">
         <ul className="text-center">
-          <li><FormatedDate /> </li>
           <li>
             <span className="text-capitalize">{props.api.description}</span> 
           </li>
