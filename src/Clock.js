@@ -16,7 +16,7 @@ export default function Clock() {
   // 1000 means every second
   return (
     <div>
-      <p>{currentTime}</p>
+      <p className="d-inline opacity-75">{currentTime}</p>
     </div>
   );
 }

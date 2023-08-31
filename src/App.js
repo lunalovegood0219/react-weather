@@ -9,9 +9,10 @@ function App() {
   return (
     <div className="App">
       <div className="weather-container">
-        <span>
-          <FormatedDate className="d-flex" /> <Clock className="d-flex" />
-        </span>
+        <div className="row">
+          <div className="col-10"><FormatedDate /></div>
+          <div className="col-2"><Clock /></div>
+        </div>
 
         <SearchEngine defaultCity="tehran" />
         <hr />

@@ -46,13 +46,13 @@ export default function SearchEngine(props) {
             onChange={updateCity}
           />
         </div>
-        <div className="col-3">
+        <div className="col-3 the-search-btn">
           <button
             type="submit"
-            className="btn btn-dark w-100 submit-btn"
+            className="btn btn-dark w-100 search-btn"
             onClick={handleSearch}
           >
-            Search
+           Search 
           </button>
         </div>
       </div>

@@ -12,7 +12,7 @@ export default function FormatedDate() {
 
     return (
       <div>
-        <p>{formattedDate}</p>
+        <p className="d-inline opacity-75">{formattedDate}</p>
       </div>
     );
 }
