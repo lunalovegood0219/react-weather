@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import WeatherIcon from "./WeatherIcon";
-import ReactAnimatedWeather from "react-animated-weather";
 
 export default function Weather(props) {
   const [temp, setTemp] = useState(props.api.temprature);
