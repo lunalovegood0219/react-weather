@@ -2,7 +2,6 @@ import React from "react";
 import "./Weather.css"
 import WeatherIcon from "./WeatherIcon";
 import ReactAnimatedWeather from "react-animated-weather";
-import Unit from "./Unit"
 export default function Weather(props) {
     
   return (
@@ -11,12 +10,12 @@ export default function Weather(props) {
       <div className="time">
         <ul className="text-center">
           <li>
-            <span className="text-capitalize">{props.api.description}</span> 
+            <span className="text-capitalize">{props.api.description}</span>
           </li>
         </ul>
       </div>
       <div className="text-center">
-        <WeatherIcon code={props.api.icon}/>
+        <WeatherIcon code={props.api.icon} />
         <span className="main-temp">{Math.round(props.api.temprature)}°C</span>
       </div>
       <div className="describtion">
@@ -25,9 +24,11 @@ export default function Weather(props) {
           <li> wind : {Math.round(props.api.wind)} km/h</li>
         </ul>
       </div>
-      <div>
-        <Unit />
-        </div>
+      <div className="text-center">
+        <a href="/">C°</a>
+        {" "}
+        <a href="/">F°</a>
+      </div>
     </div>
   );
 }

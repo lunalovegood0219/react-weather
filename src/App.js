@@ -13,7 +13,6 @@ function App() {
           <div className="col-10"><FormatedDate /></div>
           <div className="col-2"><Clock /></div>
         </div>
-
         <SearchEngine defaultCity="tehran" />
         <hr />
         <Forcast />
