@@ -32,7 +32,10 @@ export default function Weather(props) {
       </div>
       <div className="text-center">
         <WeatherIcon code={props.api.icon} />
-        <span className="main-temp">{Math.round(temp)}{unit}</span>
+        <span className="main-temp">
+          {Math.round(temp)}
+          {unit}
+        </span>
       </div>
       <div className="describtion">
         <ul className="text-center">
@@ -46,7 +49,7 @@ export default function Weather(props) {
         </a>{" "}
         <a
           href="/"
-          className="btn btn-dark rounded-5"
+          className="btn btn-outline-dark rounded-5"
           onClick={displayFahrenheiht}
         >
           F°
