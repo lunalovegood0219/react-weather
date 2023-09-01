@@ -22,7 +22,7 @@ export default function Weather(props) {
 
   return (
     <div className="Weather">
-      <h2 className="text-center text-capitalize">{props.city}</h2>
+      <h2 className="text-center text-capitalize">{props.api.city}</h2>
       <div className="time">
         <ul className="text-center">
           <li>

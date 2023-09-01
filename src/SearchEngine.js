@@ -17,6 +17,7 @@ export default function SearchEngine(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
+      city: response.data.name,
     });
   }
   function search() {
