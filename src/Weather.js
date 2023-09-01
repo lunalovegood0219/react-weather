@@ -5,16 +5,19 @@ import ReactAnimatedWeather from "react-animated-weather";
 
 export default function Weather(props) {
   const [temp, setTemp] = useState(props.api.temprature);
+  const [unit, setUnit] = useState("°C");
 
   function displayFahrenheiht(event) {
     event.preventDefault();
     let celsuis = props.api.temprature;
     let fahrenheiht = Math.round((celsuis * 9) / 5 + 32);
     setTemp(fahrenheiht);
+    setUnit("°F");
   }
   function displayCelsius(event) {
     event.preventDefault();
     setTemp(props.api.temprature);
+    setUnit("°C");
   }
 
   return (
@@ -29,7 +32,7 @@ export default function Weather(props) {
       </div>
       <div className="text-center">
         <WeatherIcon code={props.api.icon} />
-        <span className="main-temp">{Math.round(temp)}°C</span>
+        <span className="main-temp">{Math.round(temp)}{unit}</span>
       </div>
       <div className="describtion">
         <ul className="text-center">
