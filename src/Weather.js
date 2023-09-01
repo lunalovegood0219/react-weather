@@ -1,9 +1,25 @@
-import React from "react";
-import "./Weather.css"
+import React, { useState } from "react";
+import "./Weather.css";
 import WeatherIcon from "./WeatherIcon";
 import ReactAnimatedWeather from "react-animated-weather";
+
 export default function Weather(props) {
+  const [temp, setTemp] = useState(props.api.temprature);
+ 
+
+  function displayFahrenheiht(event) {
+    event.preventDefault();
+    let celsuis = props.api.temprature;
+    let fahrenheiht = Math.round((celsuis * 9) / 5 + 32);
+    setTemp(fahrenheiht);
     
+  }
+  function displayCelsius(event) {
+    event.preventDefault();
+    setTemp(props.api.temprature);
+    
+  }
+
   return (
     <div className="Weather">
       <h2 className="text-center text-capitalize">{props.city}</h2>
@@ -16,7 +32,7 @@ export default function Weather(props) {
       </div>
       <div className="text-center">
         <WeatherIcon code={props.api.icon} />
-        <span className="main-temp">{Math.round(props.api.temprature)}°C</span>
+        <span className="main-temp">{Math.round(temp)}°C</span>
       </div>
       <div className="describtion">
         <ul className="text-center">
@@ -25,9 +41,18 @@ export default function Weather(props) {
         </ul>
       </div>
       <div className="text-center">
-        <a href="/">C°</a>
-        {" "}
-        <a href="/">F°</a>
+        <a
+          href="/"
+          onClick={displayCelsius}
+        >
+          C°
+        </a>{" "}
+        <a
+          href="/"
+          onClick={displayFahrenheiht}
+        >
+          F°
+        </a>
       </div>
     </div>
   );
