@@ -5,19 +5,16 @@ import ReactAnimatedWeather from "react-animated-weather";
 
 export default function Weather(props) {
   const [temp, setTemp] = useState(props.api.temprature);
- 
 
   function displayFahrenheiht(event) {
     event.preventDefault();
     let celsuis = props.api.temprature;
     let fahrenheiht = Math.round((celsuis * 9) / 5 + 32);
     setTemp(fahrenheiht);
-    
   }
   function displayCelsius(event) {
     event.preventDefault();
     setTemp(props.api.temprature);
-    
   }
 
   return (
@@ -41,14 +38,12 @@ export default function Weather(props) {
         </ul>
       </div>
       <div className="text-center">
-        <a
-          href="/"
-          onClick={displayCelsius}
-        >
+        <a href="/" className="btn btn-dark rounded-5" onClick={displayCelsius}>
           C°
         </a>{" "}
         <a
           href="/"
+          className="btn btn-dark rounded-5"
           onClick={displayFahrenheiht}
         >
           F°
