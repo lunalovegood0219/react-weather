@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Forcast.css";
-import WeatherIcon from "./WeatherIcon";
 import axios from "axios";
+import WeatherForcastDay from "./WeatherForcastDay";
 
 export default function Forcast(props) {
   const [loaded, setLoaded] = useState(false);
@@ -19,16 +19,7 @@ export default function Forcast(props) {
       <div className="weather-forcast text-center">
         <div className="row">
           <div className="col">
-            <div className="weather-forcast-day"></div>
-            <span className="max-temperature">
-              {forcast.daily[0].temp.max}°C{" "}
-            </span>
-            <span className="min-temperature">
-              {forcast.daily[0].temp.min}°C
-            </span>
-            <div className="weather-icon">
-              <WeatherIcon code={forcast.daily[0].weather[0].icon} size={29} />
-            </div>
+           <WeatherForcastDay forcastData={forcast} /> 
           </div>
         </div>
       </div>
