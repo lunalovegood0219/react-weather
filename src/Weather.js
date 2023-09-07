@@ -61,7 +61,7 @@ export default function Weather(props) {
         </a>
       </div>
       <hr />
-      <Forcast />
+      <Forcast coordinate={props.api.coordinate} />
     </div>
   );
 }

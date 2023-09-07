@@ -18,6 +18,7 @@ export default function SearchEngine(props) {
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
       city: response.data.name,
+      coordinate: response.data.coord,
     });
   }
   function search() {
