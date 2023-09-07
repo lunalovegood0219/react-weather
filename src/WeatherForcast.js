@@ -17,10 +17,10 @@ export default function Forcast(props) {
   axios.get(apiUrl).then(displayWeatherForcast);
 
   return (
-    <div className="weatger-forcast text-center">
+    <div className="weather-forcast text-center">
       <div className="row">
         <div className="col">
-          <div className="weather-forcast-day">sun</div>
+          <div className="weather-forcast-day">fri</div>
           <span className="max-temperature">18°C </span>
           <span className="min-temperature">15°C</span>
           <div className="weather-icon">
