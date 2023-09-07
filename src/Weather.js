@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Weather.css";
 import WeatherIcon from "./WeatherIcon";
+import Forcast from "./WeatherForcast"
 
 export default function Weather(props) {
   const [temp, setTemp] = useState(props.api.temprature);
@@ -35,7 +36,7 @@ export default function Weather(props) {
         </ul>
       </div>
       <div className="text-center">
-        <WeatherIcon code={props.api.icon} />
+        <WeatherIcon code={props.api.icon} size={44} />
         <span className="main-temp">
           {Math.round(temp)}
           {unit}
@@ -59,6 +60,8 @@ export default function Weather(props) {
           F°
         </a>
       </div>
+      <hr />
+      <Forcast />
     </div>
   );
 }

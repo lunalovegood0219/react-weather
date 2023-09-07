@@ -1,6 +1,6 @@
 import "./App.css";
 import Clock from "./Clock";
-import Forcast from "./Forcast";
+
 import SearchEngine from "./SearchEngine";
 import FormatedDate from "./FormatedDate";
 import "bootstrap/dist/css/bootstrap.css"
@@ -14,8 +14,6 @@ function App() {
           <div className="col-2"><Clock /></div>
         </div>
         <SearchEngine defaultCity="tehran" />
-        <hr />
-        <Forcast />
       </div>
       <div className="info">
         <a href="https://github.com/lunalovegood0219/react-weather">
