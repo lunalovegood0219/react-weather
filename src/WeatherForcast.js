@@ -19,7 +19,7 @@ export default function Forcast(props) {
       <div className="weather-forcast text-center">
         <div className="row">
           <div className="col">
-           <WeatherForcastDay forcastData={forcast[0]} /> 
+            <WeatherForcastDay forcastData={forcast} />
           </div>
         </div>
       </div>
