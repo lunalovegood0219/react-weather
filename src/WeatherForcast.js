@@ -18,9 +18,15 @@ export default function Forcast(props) {
     return (
       <div className="weather-forcast text-center">
         <div className="row">
-          <div className="col">
-            <WeatherForcastDay forcastData={forcast} />
+          {forcast.map(function(dailyForcast, index){
+            return(
+              <div className="col" key={index}>
+                {index}
+            <WeatherForcastDay forcastData={dailyForcast} />
           </div>
+            )
+          })}
+          
         </div>
       </div>
     );
