@@ -1,0 +1,10 @@
+.weather-forcast-day{
+    text-transform: capitalize;
+    font-size: large;
+}
+.temperatures{
+    display: flex;
+}
+.max-temperature,.min-temperature{
+    margin: 5px;
+}
