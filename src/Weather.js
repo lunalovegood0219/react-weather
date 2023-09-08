@@ -29,13 +29,13 @@ export default function Weather(props) {
     <div className="Weather">
       <h2 className="text-center text-capitalize">{props.api.city}</h2>
       <div className="time">
-        <ul className="text-center">
+        <ul>
           <li>
             <span className="text-capitalize">{props.api.description}</span>
           </li>
         </ul>
       </div>
-      <div className="text-center">
+      <div>
         <WeatherIcon code={props.api.icon} size={44} />
         <span className="main-temp">
           {Math.round(temp)}
@@ -43,12 +43,12 @@ export default function Weather(props) {
         </span>
       </div>
       <div className="describtion">
-        <ul className="text-center">
+        <ul>
           <li>humidity : {Math.round(props.api.humidity)} %</li>
           <li> wind : {Math.round(props.api.wind)} km/h</li>
         </ul>
       </div>
-      <div className="text-center">
+      <div>
         <a href="/" className="btn btn-dark rounded-5" onClick={displayCelsius}>
           C°
         </a>{" "}

@@ -1,11 +1,9 @@
-li{
+ul{
     list-style: none;
-    margin-left: -32px;
+    position: relative;
+    left: -15px;
+    opacity: 0.7;
 }
 .main-temp{
-    font-size: 53px;
-    margin-left: 5px;
+    font-size: 60px
 }
-.Weather ul{
-    opacity: 0.7;
-} 
