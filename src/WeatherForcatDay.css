@@ -1,11 +1,26 @@
+.WeatherForecastDay{
+    border: 0.5px solid #9e9393;
+    border-radius: 3px;
+    padding: 2px;
+}
 .weather-forcast-day{
     font-size: 20px;
+    margin-bottom: 10px;
 }
+.temperatures{
+    margin-top: 10px;
+}
+
 @media(max-width:570px){
 .temperatures{
     display: flex;
+    justify-content: center;
 }
 .max-temperature{
     margin-bottom: 10px;
+}
+.WeatherForecastDay{
+    padding: 0.5px;
+    margin: 3px;
 }
 }

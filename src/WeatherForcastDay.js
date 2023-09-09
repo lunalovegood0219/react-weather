@@ -19,7 +19,7 @@ export default function WeatherForcastDay(props) {
   }
 
   return (
-    <div>
+    <div className="WeatherForecastDay">
       <div className="weather-forcast-day text-capitalize">
         {weatherForcastDay()}
       </div>
