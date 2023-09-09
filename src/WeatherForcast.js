@@ -17,16 +17,14 @@ export default function Forcast(props) {
   if (loaded) {
     return (
       <div className="weather-forcast text-center">
-        <div className="row">
+        <div className="row ">
           {forcast.map(function(dailyForcast, index){
             if (index< 6){
               return(
               <div className="col" key={index}>
             <WeatherForcastDay forcastData={dailyForcast} />
           </div>
-            )
-            }
-            
+            )}
           })}
           
         </div>
