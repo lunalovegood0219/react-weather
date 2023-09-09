@@ -10,8 +10,8 @@ export default function Forcast(props) {
 
   function displayWeatherForcast(response) {
     setLoaded(true);
-    setForcast(response.data);
-    console.log(response.data);
+    setForcast(response.data.daily); 
+    console.log(response.data.daily);
   }
 
   if (loaded) {
