@@ -1,3 +1,11 @@
 .weather-forcast-day{
     font-size: 20px;
 }
+@media(max-width:570px){
+.temperatures{
+    display: flex;
+}
+.max-temperature{
+    margin-bottom: 10px;
+}
+}
