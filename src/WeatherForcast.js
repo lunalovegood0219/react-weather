@@ -19,12 +19,14 @@ export default function Forcast(props) {
       <div className="weather-forcast text-center">
         <div className="row">
           {forcast.map(function(dailyForcast, index){
-            return(
+            if (index< 6){
+              return(
               <div className="col" key={index}>
-                {index}
             <WeatherForcastDay forcastData={dailyForcast} />
           </div>
             )
+            }
+            
           })}
           
         </div>
