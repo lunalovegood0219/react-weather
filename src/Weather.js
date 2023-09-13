@@ -1,29 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Weather.css";
 import WeatherIcon from "./WeatherIcon";
 import Forcast from "./WeatherForcast"
 
 export default function Weather(props) {
-  const [temp, setTemp] = useState(props.api.temprature);
-  const [unit, setUnit] = useState("°C");
-
-  useEffect(() => {
-    setTemp(props.api.temprature);
-    setUnit("°C");
-  }, [props.api]);
-
-  function displayFahrenheiht(event) {
-    event.preventDefault();
-    let celsuis = props.api.temprature;
-    let fahrenheiht = Math.round((celsuis * 9) / 5 + 32);
-    setTemp(fahrenheiht);
-    setUnit("°F");
-  }
-  function displayCelsius(event) {
-    event.preventDefault();
-    setTemp(props.api.temprature);
-    setUnit("°C");
-  }
+  const temp = props.api.temprature;
 
   return (
     <div className="Weather">
@@ -39,7 +20,6 @@ export default function Weather(props) {
         <WeatherIcon code={props.api.icon} size={44} />
         <span className="main-temp">
           {Math.round(temp)}
-          {unit}
         </span>
       </div>
       <div className="describtion">
@@ -47,18 +27,6 @@ export default function Weather(props) {
           <li>humidity : {Math.round(props.api.humidity)} %</li>
           <li> wind : {Math.round(props.api.wind)} km/h</li>
         </ul>
-      </div>
-      <div>
-        <a href="/" className="btn btn-dark rounded-5" onClick={displayCelsius}>
-          C°
-        </a>{" "}
-        <a
-          href="/"
-          className="btn btn-outline-dark rounded-5"
-          onClick={displayFahrenheiht}
-        >
-          F°
-        </a>
       </div>
       <hr />
       <Forcast coordinate={props.api.coordinate} />
